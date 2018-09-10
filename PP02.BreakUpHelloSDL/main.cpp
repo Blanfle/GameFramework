@@ -1,28 +1,8 @@
-
 #include <SDL.h>
 
 SDL_Window* g_pWindow = 0;
 SDL_Renderer* g_pRenderer = 0;
-void init() {}
-void render();
-void update() {}
-void handleEvents() {}
-void clean() {}
-
-bool g_bRunning = true;
-
-int main()
-{
-	init();
-	while (g_bRunning)
-	{
-		handleEvents();
-		update();
-		render();
-	}
-	clean();
-	return 1;
-}
+bool g_bRunning = false;
 
 bool init(const char* title, int xpos, int ypos, int width, int height, int flags)
 {
@@ -43,14 +23,15 @@ bool init(const char* title, int xpos, int ypos, int width, int height, int flag
 
 void render()
 {
-	SDL_SetRenderDrawColor(g_pRenderer, 0, 0, 0, 255);
+	SDL_SetRenderDrawColor(g_pRenderer, 255, 0, 0, 255);
 	SDL_RenderClear(g_pRenderer);
 	SDL_RenderPresent(g_pRenderer);
+	
 }
 
 int main(int argc, char* argv[])
 {
-	if (init("Chapter 1 : Setting up SDL", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED,
+	if (init("PP02.BreakUpHelloSDL Retry", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED,
 		640, 480, SDL_WINDOW_SHOWN)) {
 		g_bRunning = true;
 	}
@@ -61,7 +42,6 @@ int main(int argc, char* argv[])
 	while (g_bRunning) {
 		render();
 	}
-
 	SDL_Quit();
 	return 0;
 }
