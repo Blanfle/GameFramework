@@ -15,6 +15,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PP05.Animating Sprite", "PP
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PP06.ImageSprite", "PP06.ImageSprite\PP06.ImageSprite.vcxproj", "{423B7E31-F368-4F6C-A40D-C4879DBC4DAF}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PP07.TextureManager", "PP07.TextureManager\PP07.TextureManager.vcxproj", "{259F9443-28AA-4B6A-8569-B0E58044E48F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -71,6 +73,14 @@ Global
 		{423B7E31-F368-4F6C-A40D-C4879DBC4DAF}.Release|x64.Build.0 = Release|x64
 		{423B7E31-F368-4F6C-A40D-C4879DBC4DAF}.Release|x86.ActiveCfg = Release|Win32
 		{423B7E31-F368-4F6C-A40D-C4879DBC4DAF}.Release|x86.Build.0 = Release|Win32
+		{259F9443-28AA-4B6A-8569-B0E58044E48F}.Debug|x64.ActiveCfg = Debug|x64
+		{259F9443-28AA-4B6A-8569-B0E58044E48F}.Debug|x64.Build.0 = Debug|x64
+		{259F9443-28AA-4B6A-8569-B0E58044E48F}.Debug|x86.ActiveCfg = Debug|Win32
+		{259F9443-28AA-4B6A-8569-B0E58044E48F}.Debug|x86.Build.0 = Debug|Win32
+		{259F9443-28AA-4B6A-8569-B0E58044E48F}.Release|x64.ActiveCfg = Release|x64
+		{259F9443-28AA-4B6A-8569-B0E58044E48F}.Release|x64.Build.0 = Release|x64
+		{259F9443-28AA-4B6A-8569-B0E58044E48F}.Release|x86.ActiveCfg = Release|Win32
+		{259F9443-28AA-4B6A-8569-B0E58044E48F}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
