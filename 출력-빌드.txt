@@ -1,0 +1,4 @@
+﻿1>------ 빌드 시작: 프로젝트: PP10.Polymorphism, 구성: Debug x64 ------
+1>Game.cpp
+1>PP10.Polymorphism.vcxproj -> C:\Users\user\Source\Repos\Blanfle\GameFramework\x64\Debug\PP10.Polymorphism.exe
+========== 빌드: 성공 1, 실패 0, 최신 0, 생략 0 ==========

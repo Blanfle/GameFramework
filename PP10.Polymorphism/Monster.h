@@ -1,11 +1,12 @@
-#include "GameObject.h"
+#include "Enemy.h"
 
-class Player : public GameObject
+class Monster : public GameObject
 {
 public:
 	void load(int x, int y, int width, int height,
 		std::string textureID);
 	void draw(SDL_Renderer* pRenderer);
 	void update();
-	//void clean();
+	void clean();
+	int g;
 };
