@@ -1,3 +1,5 @@
+#pragma once
+#include "SDL.h"
 #include "LoaderParams.h"
 
 class GameObject
