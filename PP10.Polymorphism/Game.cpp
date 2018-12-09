@@ -1,5 +1,5 @@
+#pragma once
 #include "Game.h"
-#include <SDL_image.h>
 
 bool Game::init(const char* title, int xpos, int ypos, int width, int height, int flags)
 {
@@ -14,14 +14,13 @@ bool Game::init(const char* title, int xpos, int ypos, int width, int height, in
 
 		m_bRunning = true;
 
-		if (!TheTextureManager::Instance()->load("assets/Megaman.png",
-			"animate", m_pRenderer))
+		if (!TheTextureManager::Instance()->load("assets/animate-alpha.png", "animate", m_pRenderer))
 		{
 			return false;
 		}
 
 		m_go = new GameObject();
-		m_monster = new Monster();
+		m_monster = new Enemy();
 
 		m_go->load(0, 0, 128, 82, "animate");
 		m_monster->load(0, 300, 128, 82, "animate");
@@ -48,13 +47,13 @@ bool Game::init(const char* title, int xpos, int ypos, int width, int height, in
 
 void Game::render()
 {
-	SDL_RenderClear(m_pRenderer); // clear to the draw colour
+	SDL_RenderClear(m_pRenderer); 
 	for (std::vector<GameObject*>::size_type i = 0;
 		 i != m_gameObjects.size(); i++)
 	{
 		m_gameObjects[i]->draw(m_pRenderer);
 	}
-	SDL_RenderPresent(m_pRenderer); // draw to the screen
+	SDL_RenderPresent(m_pRenderer); 
 }
 
 void Game::clean()

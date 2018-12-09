@@ -1,6 +1,5 @@
+#pragma once
 #include "TextureManager.h"
-#include <iostream>
-#include <SDL_image.h>
 
 bool TextureManager::load(std::string fileName, std::string id, SDL_Renderer* pRenderer)
 {
@@ -17,27 +16,20 @@ bool TextureManager::load(std::string fileName, std::string id, SDL_Renderer* pR
 	return false;
 }
 
-void TextureManager::draw(std::string id,
-	int x, int y, int width, int height,
-	SDL_Renderer* pRenderer, SDL_RendererFlip flip)
+void TextureManager::draw(std::string id, int x, int y, int width, int height, SDL_Renderer* pRenderer, SDL_RendererFlip flip)
 {
 	SDL_Rect srcRect;
 	SDL_Rect destRect;
-
 	srcRect.x = 0;
 	srcRect.y = 0;
 	srcRect.w = destRect.w = width;
 	srcRect.h = destRect.h = height;
 	destRect.x = x;
 	destRect.y = y;
-
-	SDL_RenderCopyEx(pRenderer, m_textureMap[id],
-		&srcRect, &destRect, 0, 0, flip);
+	SDL_RenderCopyEx(pRenderer, m_textureMap[id], &srcRect, &destRect, 0, 0, flip);
 }
 
-void TextureManager::drawFrame(std::string id, int x, int y,
-	int width, int height, int currentRow, int currentFrame,
-	SDL_Renderer* pRenderer, SDL_RendererFlip flip)
+void TextureManager::drawFrame(std::string id, int x, int y, int width, int height, int currentRow, int currentFrame, SDL_Renderer* pRenderer, SDL_RendererFlip flip)
 {
 	SDL_Rect srcRect;
 	SDL_Rect destRect;
@@ -47,7 +39,5 @@ void TextureManager::drawFrame(std::string id, int x, int y,
 	srcRect.h = destRect.h = height;
 	destRect.x = x;
 	destRect.y = y;
-
-	SDL_RenderCopyEx(pRenderer, m_textureMap[id], &srcRect,
-		&destRect, 0, 0, flip);
+	SDL_RenderCopyEx(pRenderer, m_textureMap[id], &srcRect, &destRect, 0, 0, flip);
 }

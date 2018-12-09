@@ -4,13 +4,10 @@
 #include "Enemy.h"
 #include <vector>
 
-
 class Game
 {
 public:
-
-	bool init(const char* title, int xpos, int ypos,
-		int width, int height, bool fullscreen);
+	bool init(const char* title, int xpos, int ypos, int width, int height, bool fullscreen);
 	void render();
 	void update();
 	void handleEvents();
@@ -25,24 +22,15 @@ public:
 		}
 		return s_pInstance;
 	}
-
-
 	SDL_Renderer* getRenderer() const { return m_pRenderer; }
 private:
 	Game() {}
 	~Game() {}
 	static Game* s_pInstance;
-
 	SDL_Window* m_pWindow;
 	SDL_Renderer* m_pRenderer;
 	bool m_bRunning;
-	int m_currentFrame;
-
 	std::vector<GameObject*> m_gameObjects;
-
-	GameObject* m_go;
-	GameObject* m_player;
-	GameObject* m_enemy;
 };
 
 typedef Game TheGame;

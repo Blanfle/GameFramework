@@ -1,11 +1,9 @@
+#pragma once
 #include"Game.h"
-#include<SDL_image.h>
-#include<iostream>
 
 Game* Game::s_pInstance = 0;
 
-bool Game::init(const char* title, int xpos, int ypos,
-	int width, int height, bool fullscreen)
+bool Game::init(const char* title, int xpos, int ypos, int width, int height, bool fullscreen)
 {
 	if (SDL_Init(SDL_INIT_EVERYTHING) >= 0)
 	{
@@ -31,20 +29,13 @@ bool Game::init(const char* title, int xpos, int ypos,
 }
 void Game::render()
 {
-
 	SDL_RenderClear(m_pRenderer);
-
-
 	for (std::vector<GameObject*>::size_type i = 0;
 		i != m_gameObjects.size(); i++)
 	{
 		m_gameObjects[i]->draw();
 	}
-
-
 	SDL_RenderPresent(m_pRenderer);
-
-
 }
 
 void Game::clean()

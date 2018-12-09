@@ -1,3 +1,4 @@
+#pragma once
 #include "Enemy.h"
 
 Enemy::Enemy(const LoaderParams* pParams) : SDLGameObject(pParams)

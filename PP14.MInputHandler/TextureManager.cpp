@@ -1,6 +1,5 @@
+#pragma once
 #include "TextureManager.h"
-#include <iostream>
-#include <SDL_image.h>
 
 TextureManager* TextureManager::s_pInstance = NULL;
 

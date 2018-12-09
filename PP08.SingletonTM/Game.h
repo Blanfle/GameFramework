@@ -1,3 +1,4 @@
+#pragma once
 #include "TextureManager.h"
 
 class Game
@@ -12,6 +13,7 @@ public:
 	void clean();
 	bool running() { return m_bRunning; }
 	int m_currentFrame;
+	int m_currentFrame1;
 	TextureManager m_textureManager;
 private:
 	SDL_Texture * m_pTexture;
@@ -20,5 +22,4 @@ private:
 	SDL_Window * m_pWindow;
 	SDL_Renderer* m_pRenderer;
 	bool m_bRunning;
-protected:
 };

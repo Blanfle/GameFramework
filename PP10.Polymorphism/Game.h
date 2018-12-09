@@ -1,5 +1,7 @@
+#pragma once
 #include "TextureManager.h"
-#include "Monster.h"
+#include "Enemy.h"
+#include "Player.h"
 #include <vector>
 
 class Game
@@ -15,7 +17,6 @@ public:
 	void handleEvents();
 	void clean();
 	bool running() { return m_bRunning; }
-	int m_currentFrame;
 	TextureManager m_textureManager;
 	GameObject* m_go;
 	GameObject* m_player;

@@ -2,7 +2,6 @@
 #include "SDLGameObject.h"
 #include"Game.h"
 
-
 SDLGameObject::SDLGameObject(const LoaderParams* pParams) :
 	GameObject(pParams),
 	m_position(pParams->getX(), pParams->getY()),

@@ -1,3 +1,4 @@
+#pragma once
 #include "Player.h"
 
 Player::Player(const LoaderParams* pParams) : SDLGameObject(pParams)

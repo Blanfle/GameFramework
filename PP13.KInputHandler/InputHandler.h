@@ -1,10 +1,9 @@
 #pragma once
 #include "SDL.h"
-
+#include "Game.h"
 
 class InputHandler
 {
-	
 public:
 	static InputHandler* Instance()
 	{
@@ -15,8 +14,7 @@ public:
 	}
 	bool isKeyDown(SDL_Scancode key);
 	void update();
-	void clean();  // 디바이스 관련 초기화된 부분을 clear 
-	
+	void clean(); 
 private:
 	InputHandler();
 	~InputHandler() {}

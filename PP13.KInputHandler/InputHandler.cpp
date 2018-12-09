@@ -1,14 +1,11 @@
 #pragma once
 #include "InputHandler.h"
-#include "Game.h"
 
 InputHandler* InputHandler::s_pInstance = 0;
+
 InputHandler::InputHandler()
 {
-	
-
 }
-
 bool InputHandler::isKeyDown(SDL_Scancode key)
 {
 	if (m_keystates != 0) {
@@ -25,7 +22,6 @@ bool InputHandler::isKeyDown(SDL_Scancode key)
 
 void InputHandler::clean()
 {
-	// 향후 추가 
 }
 
 void InputHandler::update()

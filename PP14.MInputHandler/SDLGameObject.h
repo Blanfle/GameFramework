@@ -3,13 +3,8 @@
 #include "Vector2D.h"
 #include "LoaderParams.h"
 
-
-
 class SDLGameObject : public GameObject
 {
-
-
-
 public:
 	SDLGameObject(const LoaderParams* pParams);
 	virtual void draw();
