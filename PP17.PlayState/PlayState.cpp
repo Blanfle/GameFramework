@@ -26,8 +26,7 @@ bool PlayState::onEnter()
 	{
 		return false;
 	}
-	GameObject* player = new Player(new LoaderParams(100, 100, 128, 55, "helicopter"));
-	m_gameObjects.push_back(player);
+	m_gameObjects.push_back(new Player(new LoaderParams(100, 100, 128, 55, "helicopter")));
 	std::cout << "entering PlayState\n";
 	return true;
 }
